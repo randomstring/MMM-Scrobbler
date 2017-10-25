@@ -13,9 +13,11 @@ You need to have a premium Spotify account to request an API key.
 
 1. Create an [account](https://www.spotify.com/)
 
-2. Request an [api key]() from Spotify. 
+2. [Register your Application](https://developer.spotify.com/my-applications/#!/applications) from Spotify.
 
-3. Start playing music via Spotify
+3. [MISSING STEP](https://developer.spotify.com/web-api/authorization-guide/) 
+
+4. Start playing music via Spotify
 
 ## Module Usage
 
