@@ -49,6 +49,8 @@ The entry in the `module array` in your `config.js` can look like the following.
 	
 }
 
+```
+
 # Thanks
 
 This was forked from [MMM-Scrobbler](https://github.com/PtrBld/MMM-Scrobbler), who did all the hard work already. I just changed it to use the Spotify API.
