@@ -24,34 +24,34 @@ margin: 0px;}
 font-size:16px;
 margin: 0px;}
 
-.scrobbler-top {
+.spotify-currently-playing-top {
   display: block;
 }
 
-.scrobbler-top > .meta{
+.spotify-currently-playing-top > .meta{
   margin-bottom: 8px;
 }
 
-.scrobbler-bottom {
+.spotify-currently-playing-bottom {
   display: block;
 }
 
-.scrobbler-left {
+.spotify-currently-playing-left {
   display: inline-flex;
 }
 
-.scrobbler-right {
+.spotify-currently-playing-right {
   display: inline-flex;
 }
 
-.scrobbler-right > .meta{
+.spotify-currently-playing-right > .meta{
   margin-left: 16px;
 }
 
-.scrobbler-left {
+.spotify-currently-playing-left {
   display: inline-flex;
 }
 
-.scrobbler-left > .meta{
+.spotify-currently-playing-left > .meta{
   margin-right: 16px;
 }
