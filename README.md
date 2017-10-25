@@ -7,7 +7,7 @@ This is an extension for the [MagicMirror](https://github.com/MichMich/MagicMirr
 
 2. A new folder will appear. Configure the module and you're done.
 
-##Configuration
+## Configuration
 
 You need to have a premium Spotify account to request an API key. 
 
@@ -17,7 +17,7 @@ You need to have a premium Spotify account to request an API key.
 
 3. Start playing music via Spotify
 
-##Module Usage
+## Module Usage
 
 The entry in the `module array` in your `config.js` can look like the following. Only username and apikey are mandatory fields. All other fields have default values.
 
@@ -48,3 +48,7 @@ The entry in the `module array` in your `config.js` can look like the following.
 		}
 	
 }
+
+# Thanks
+
+This was forked from [MMM-Scrobbler](https://github.com/PtrBld/MMM-Scrobbler), who did all the hard work already. I just changed it to use the Spotify API.
