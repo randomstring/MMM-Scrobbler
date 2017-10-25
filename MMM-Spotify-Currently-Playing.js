@@ -1,4 +1,4 @@
-Module.register("MMM-Scrobbler",{
+Module.register("MMM-Spotify-Currently-Playing",{
     // Default module config.
     defaults: {
         username: '',
@@ -12,7 +12,7 @@ Module.register("MMM-Scrobbler",{
 	alignment: "bottom" //possible values: top, bottom, left, right
     },
     getStyles: function() {
-	return ['MMM-Scrobbler.css'];
+	return ['MMM-.css'];
     },
     start: function() {
 	Log.info("Starting module: " + this.name);
@@ -28,7 +28,7 @@ Module.register("MMM-Scrobbler",{
     getDom: function() {
         var wrapper = document.createElement("div");
 	if (!this.loaded) {
-	    wrapper.innerHTML = "Scrobble data...";
+	    wrapper.innerHTML = "Spotify data...";
 	    wrapper.className = "dimmed light small";
 	    return wrapper;
 	}
@@ -41,7 +41,7 @@ Module.register("MMM-Scrobbler",{
 	    this.failedCounter = 0;
 	    this.delay = this.config.updateInterval;
 	    this.show(this.config.animationSpeed);
-	    var html = "<div class='player bright scrobbler-" +
+	    var html = "<div class='player bright spotify-currently-playing" +
 		this.config.alignment + "'>";
 	    var albumart_html = '';
 	    var meta_html = '';
@@ -83,12 +83,11 @@ Module.register("MMM-Scrobbler",{
 	this.scheduleUpdate(this.delay);
 	return wrapper;
     },
-    queryLastFm: function(){
-	var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user="
+    querySpotify: function(){
+	var url = "https://api.spotify.com/v1/me/player/currently-playing?user="
 	    + this.config.username
 	    + "&api_key="
-	    + this.config.apikey
-	    + "&limit=1&format=json";
+	    + this.config.apikey;
 	var self = this;		
 	var i = new XMLHttpRequest;
 	i.open("GET",url,true),i.onload=function(){
@@ -121,7 +120,7 @@ Module.register("MMM-Scrobbler",{
 	//set update timeout
 	var self = this;
 	setTimeout(function() {
-	    self.queryLastFm();
+	    self.querySpotify();
 	}, nextLoad);
     }
 });
